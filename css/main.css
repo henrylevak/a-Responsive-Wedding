@@ -1,0 +1,624 @@
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	
+	#hide{
+		display:none;
+	}
+	
+	* {
+		-webkit-tap-highlight-color:rgba(0,0,0,0);
+		color:#4A4743;
+	   -moz-box-sizing:    border-box;
+	   -webkit-box-sizing: border-box;
+	    box-sizing:        border-box;
+		line-height: 1;
+	}
+
+	.fb-comments span:first-child{
+		width: 100% !important;
+		padding-top:30px;
+	}	
+	
+	#fb-root{
+		display:none !important;
+	}
+	
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after, q:before, q:after {
+		content: '';
+		content: none;
+	}
+	
+	body{
+		background-color: #FCFCFC;
+		font-family: 'Lato', sans-serif;
+	}
+
+/*PC*/
+	#mainimage {
+		background-size: auto 122%;
+		background-image: url('../img/HenryNicole925.png');
+		background-position: 75% 0%;
+		height: 407px;
+		width:960px;
+		margin-right: auto;
+		margin-left: auto;
+		background-color: #f9f9f9;
+		
+		box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+		-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+		-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+		
+		border: 10px solid white;
+		margin-bottom: 20px;
+		margin-top: 10px;
+   }
+   
+	#allBoxes.moveaway,#mainimage.moveaway{
+		transform: translate(0px,-425px);
+		-ms-transform: translate(0px,-425px); 
+		-webkit-transform: translate(0px,-425px); 
+		-o-transform: translate(0px,-425px); 
+		-moz-transform: translate(0px,-425px); 
+		
+		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+		-moz-transition:-moz-transform 1.0s ease-in-out;
+		-o-transition:-o-transform 1.0s ease-in-out;
+		-ms-transition:-ms-transform 1.0s ease-in-out;	
+		transition:transform 1.0s ease-in-out;
+	}
+	
+	#allBoxes.bringback,#mainimage.bringback{
+		transform: translate(0px,0px);
+		-ms-transform: translate(0px,0px);
+		-webkit-transform: translate(0px,0px);
+		-o-transform: translate(0px,0px);
+		-moz-transform: translate(0px,0px);
+		
+		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+		-moz-transition:-moz-transform 1.0s ease-in-out;
+		-o-transition:-o-transform 1.0s ease-in-out;
+		-ms-transition:-ms-transform 1.0s ease-in-out;	
+		transition:transform 1.0s ease-in-out;
+	}
+
+   .fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+   
+   #allBoxes, #fbcomments{
+		width:938px;
+		margin-right: auto;
+		margin-left: auto;
+		height: 183px;
+		
+		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+		-moz-transition:-moz-transform 1.0s ease-in-out;
+		-o-transition:-o-transform 1.0s ease-in-out;
+		-ms-transition:-ms-transform 1.0s ease-in-out;	
+		transition:transform 1.0s ease-in-out;
+   }
+   
+   #allBoxes{
+		padding-bottom: 40px;
+   }
+   
+   #meetHenry,#meetNicole,#theWeddingParty,#TheWedding,#AboutUs,#partialOcean,#Oceanview,#swimOut{
+		margin-bottom: 40px;
+		border-style: solid;
+		border-width: 7px;
+		overflow: hidden;
+		border-color: #f9f9f9;
+		height: 100%;
+		width:20.5%;
+		margin-left: auto;
+		box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+		-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+		-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+		cursor: pointer;
+   }
+   
+   #header{
+   	width:100%;
+   }
+   
+   iframe{
+   	width: 943px !important;
+   }
+   
+   #AboutUs,#meetHenry,#meetNicole,#theWeddingParty{
+   	margin-right: 6%;
+		float:left;
+		height: 145px;
+   }
+   
+   #TheWedding{
+		float:left;
+		height: 145px;
+	}
+   	
+	#allBoxes > div:nth-child(-n+3) > div{
+  	 	background-color: white;
+		width: 100%;
+		height: 90%;
+		margin:auto;
+		
+		transition-property: background-position 225ms ease-out;
+		-moz-transition-property: background-position 225ms ease-out;
+		-webkit-transition-property: background-position 225ms ease-out;
+		-o-transition-property: background-position 225ms ease-out;
+		background-size: cover;
+   }
+   #meetNicole{
+		background-image: url('../img/NicoleFace.png');
+		background-position: center center;
+   }
+   #meetHenry{
+		background-image: url('../img/HenryFace.png');
+		background-position: center center;
+   }
+   #aboutUs{
+		background-image: url('../img/AboutUs.png');
+		background-position: center center;
+   }
+   #theWeddingParty{
+		background-image: url('../img/TheWeddingparty.png');
+		background-position: center center;
+   } #theWedding{
+		background-image: url('../img/TheWedding.png');
+		background-position: center center;
+   }
+  
+	.nameofhonor{
+		font-weight: 900;
+	}
+	
+	#location{
+		padding-top: 40px;
+	}
+	
+	#location, #bestman{
+		margin-bottom: 50px;
+	}
+	
+	#locationimage	{	
+		width: 155px;
+		height: 155px;
+		float:left;
+		border-style: solid;
+		border-width: 2px;
+		overflow: hidden;
+		border-color: white;
+		margin: 0px 8px 2px 8px;
+		
+		-moz-box-shadow: 0 0 5px 1px #888;
+		-webkit-box-shadow: 0 0 1px 5px #888;
+		box-shadow: 0 0 5px 1px #888;
+		background-image: url('../img/secrets.jpg');
+	}
+	
+	#bestman >.nameofhonor{
+		float:right;
+	}
+	
+	#bestManimage{	
+		width: 155px;
+		height: 155px;
+		float:right;
+		border-style: solid;
+		border-width: 2px;
+		overflow: hidden;
+		border-color: white;
+		margin: 0px 8px 2px 8px;
+		
+		-moz-box-shadow: 0 0 5px 1px #888;
+		-webkit-box-shadow: 0 0 1px 5px #888;
+		box-shadow: 0 0 5px 1px #888;
+		background-image: url('../img/govze.jpg');
+   		background-position: center center;
+	}
+	
+	#maidofHonorimage{	
+		width: 155px;
+		height: 155px;
+		float:left;
+		border-style: solid;
+		border-width: 2px;
+		overflow: hidden;
+		border-color: white;
+		margin: 0px 8px 2px 8px;
+		
+		-moz-box-shadow: 0 0 5px 1px #888;
+		-webkit-box-shadow: 0 0 1px 5px #888;
+		box-shadow: 0 0 5px 1px #888;
+		background-image: url('../img/govze.jpg');
+   		background-position: center center;
+	}
+	
+	#henrypicture1{
+		background-image: url('../img/henrypicture1.jpg');
+		height: 600px;
+		width:100%;
+		background-position: 100%; 
+	}
+	
+	.henrypicture1 {
+		float: right;
+		width: 355px;
+		background-color: white;
+		position: absolute;
+		right: 3%;
+		top: 20px;
+		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+		padding: 10px;
+		opacity: .8;
+		font-size: 1em;
+	}
+	
+	#nicolepicture1{
+		background-image: url('../img/nicolepicture1.jpg');
+		height: 600px;
+		width:100%;
+		background-position: 0% 0%; 
+	}
+	
+	.nicolepicture1{
+		float: left;
+		width: 40%;
+		background-color: white;
+		position: absolute;
+		left: 2%;
+		top: 100px;
+		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+		padding: 10px;
+		opacity: .8;
+	}
+
+	#mainStage{
+		-webkit-transform: translateZ(0);
+		clear: both;
+		width: 100%;
+		display:none;
+		text-align: justify;
+		opacity: 0;
+		transition: opacity 300ms linear;
+		-webkit-transition: opacity 300ms linear;
+		-moz-transition: opacity 300ms linear;
+		-o-transition: opacity 300ms linear;
+	}
+	
+	#mainimage > div{
+		-webkit-transform:translate3d(0,0,0);
+		display:inline;
+		background-color:white;
+		opacity:0;
+		margin-top: 4px;
+		color:black;
+		font-weight:400;
+		font-size: 2.8em;
+		position: relative;
+		transition: opacity 300ms linear;
+		-webkit-transition: opacity 300ms linear;
+		-moz-transition: opacity 300ms linear;
+		-o-transition: opacity 300ms linear;
+	}
+	
+	#mainimage > div:first-child{
+		top: 10%;
+		left: 16%;
+		padding: 7px;
+	}
+	#mainimage > div:nth-child(3){
+		top: 15%;
+		left: 16%;
+		padding: 1px;
+	}
+	#mainimage > div:nth-child(5){
+		top: 10%;
+		left: 24%;
+		padding: 1px;
+		font-size: 1em;
+		top: 32%;
+		left: 16%;
+	}
+	#gallery {
+		margin-top: 10px;
+	}
+	#gallery > div {
+		float: left;
+		width: 18%;
+		height: 140px;
+		margin:1%;
+		background-position: center center;
+		background-repeat:no-repeat;
+
+		box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+		-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+		-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	}
+		
+	#mainStagetext{
+		margin-bottom:20px;
+	}	
+
+	.bringbackFast{
+		transition: opacity 0ms linear;
+		-webkit-transition: opacity 0ms linear;
+		-moz-transition: opacity 0ms linear;
+		-o-transition: opacity 0ms linear;
+	}
+	
+	#partialOcean,#Oceanview, #swimOut{
+		background-size: auto 100%; 
+		width: 30%;
+		float:left;
+		margin: 1.66666666666667%;
+		position:relative;
+		margin-bottom:45px;
+		margin-top: 38px;
+	}
+	
+	#partialOcean > span,#Oceanview > span, #swimOut > span{
+		position:absolute;
+		right: 0;
+		bottom: 4px;
+		background-color: white;
+		opacity: 0.8;
+		color: black;
+		text-align: right;
+		font-size: 0.9em;
+	}
+	
+	#partialOcean{
+		background-size: 115%;
+		background-image: url('../img/jrpartialocean.png');
+		background-position:center; 
+	}
+	#Oceanview{
+		background-image: url('../img/jrsuiteocean.png');
+		background-position:center; 
+		background-size: 115%;
+	}
+	#swimOut{
+		background-image: url('../img/jrsuiteswimout.png');
+		background-position:center; 
+		background-size: 115%;
+	}
+	
+	.image0{
+		background-image: url('../gallery/thumb0.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image1{
+		background-image: url('../gallery/thumb1.jpg');
+		background-size: auto 100%; 
+	}
+	
+	.image2{
+		background-image: url('../gallery/thumb2.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image3{
+		background-image: url('../gallery/thumb3.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image4{
+		background-image: url('../gallery/thumb4.jpg');
+		background-size: 100%; 
+	}	
+	
+	.image5{
+		background-image: url('../gallery/thumb5.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image6{
+		background-image: url('../gallery/thumb6.jpg');
+		background-size:  100%; 
+	}	
+	
+	.image7{
+		background-image: url('../gallery/thumb7.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image8{
+		background-image: url('../gallery/thumb8.jpg');
+		background-size:  100%; 
+	}	
+	
+	.image9{
+		background-image: url('../gallery/thumb9.jpg');
+		background-size:  100%; 
+	}	
+	
+	#imageFrame{
+		background-color: transparent;
+		position:absolute;
+		z-index:11;
+		top: 0;
+		display:none;
+		background-position: center center;
+		background-repeat:no-repeat;
+	}
+	
+	#imageframe[data-orientation="landscape"] {
+		width: 100%;
+		height: 100%;
+		background-size: auto 100%;
+	}
+	
+	#imageFrame[data-orientation="portrait"]{
+		width: 100%;
+		height: 100%;
+		background-size: auto 100%; 
+	}
+	#imageFramebuttons{
+		display:none;
+		z-index: 20;
+		position: absolute;
+		right: 20px;
+	}
+	
+	#imageFramebuttons > span{
+		background-color:white;
+		opacity:.4;
+		padding: 5px;
+		float:right;
+		margin-right: 20px;
+		margin-top: 4px;
+		color:black;
+		font-weight:400;
+	}
+	
+	#theWeddingstageButtons{
+		width: 480px;
+		margin: auto;
+		height: 35px
+	}
+	
+	#theWeddingstageButtons > span{
+		text-shadow: 0px 1px 0px #e1e1e8;
+		color:#4A4743;
+		text-shadow: 1px 1px 1px white; 
+		text-align: center;
+		width:160px;
+		padding: 6px 12px 6px 10px;
+		cursor: pointer;
+		border-style: solid;
+		border-width: 1px;
+	  
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #e0e0e0));
+		background-image: -webkit-linear-gradient(#ffffff, #e0e0e0);
+		background-image: -moz-linear-gradient(#ffffff, #e0e0e0);
+		background-image: -o-linear-gradient(#ffffff, #e0e0e0);
+		background-image: -ms-linear-gradient(#ffffff, #e0e0e0);
+		background-image: linear-gradient(#ffffff, #e0e0e0);
+		border-color: #B9C1C4;
+		float:left;
+	}
+	
+	#theWeddingstageButtons > span:first-child{
+		-moz-border-radius: 4px 0 0 4px;
+		-webkit-border-radius: 4px 0 0 4px;
+		-o-border-radius: 4px 0 0 4px;
+		-ms-border-radius: 4px 0 0 4px;
+		border-radius: 4px 0 0 4px;
+	}
+	
+	#theWeddingstageButtons > span:nth-child(2){
+		border-width: 1px 0px 1px 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;
+		-o-border-radius: 0px;
+		-ms-border-radius: 0px;
+		border-radius: 0px;
+	}
+	
+	#theWeddingstageButtons > span:nth-child(3){
+		-moz-border-radius: 0px 4px 4px 0px;
+		-webkit-border-radius: 0px 4px 4px 0px;
+		-o-border-radius: 0px 4px 4px 0px;
+		-ms-border-radius: 0px 4px 4px 0px;
+		border-radius: 0px 4px 4px 0px;
+	}
+	#theWeddingstageContent{
+		padding-top: 30px;
+	}
+	
+	li{
+		list-style-type:circle;
+		margin-left:50px;
+		font-size:1em;
+		margin-top:5px;
+	}
+	td{
+		border: 1;
+		border-style: solid;
+		padding:6px;
+		border-color: #B9C1C4;
+	}
+	tr > td:nth-child(2n+1){
+		text-align:right;
+		border-width: 9px 1px 0px 0px;
+		border-top-color: #FCFCFC;
+	}
+	tr > td:nth-child(n+2){
+		border: 0px;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top: 20px;
+	}
+	.touched{
+		box-shadow: inset 2px 2px 12px white !important;
+	}
+	
+@media all and (min-width: 1025px) {
+	#mainStage.moveaway{
+		height: 490px;
+		opacity:1;
+	}
+	#mainStage.bringback{
+		height: 0px;
+	}
+}
+	.bold{
+		font-weight:900;
+	}
+	.center{
+		text-align:center;
+	}
+	.h1{
+		font-size: 1.5em;
+	}
+	.h2{
+		font-size: 1.2em;
+	}
+	.padding{
+		padding-bottom: 20px;
+	}
+	.paddingtop{
+		padding-top: 20px;
+	}
+	#overLay{
+		background-color:white;
+		opacity:.9;
+		width:100%;
+		height:115%;
+		position:absolute;
+		display:none;
+		z-index:10;
+	}

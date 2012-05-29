@@ -1,0 +1,232 @@
+@media all and (max-width: 600px) {
+	
+.fb-comments {
+	width: 320px !important;
+	margin-top: 5px !important;
+	margin-bottom: 20px !important;
+}
+	#mainImage{
+		height: 165px;
+		margin-bottom: 10px;
+		margin-top: 5px;
+		border-width: 4px;
+		background-size: auto 181%;
+		background-position: 52% 44%;
+		width: 98%;
+	}
+	
+	#mainimage > div:first-child{
+		top: 17px;
+		left: 16%;
+		padding: 7px;
+		font-size: 1em;
+	}
+	#mainimage > div:nth-child(3){
+		top: 62px;
+		left: 16%;
+		padding: 1px;
+		font-size: 1em;
+	}
+	#mainimage > div:nth-child(5){
+		padding: 1px;
+		top: 88px;
+		left: 11%;
+		font-size: 0.7em;
+	}
+	
+	#aboutUs{
+		clear: both;
+	}
+	#meetHenry, #meetNicole, #theWedding, #aboutUs {
+		width: 45.5%;
+		margin-right: 3%;
+		background-repeat: no-repeat;
+	}
+	
+	#meetHenry, #aboutUs{
+		margin-left: 3%;
+	}
+	
+	#allBoxes{
+		height: 120px;
+	}
+	
+	#allBoxes.moveaway, #mainimage.moveaway{
+		transform: translate(0px,-175px);
+		-ms-transform: translate(0px,-175px); /* IE 9 */
+		-webkit-transform: translate(0px,-175px); /* Safari and Chrome */
+		-o-transform: translate(0px,-175px); /* Opera */
+		-moz-transform: translate(0px,-175px); /* Firefox */
+		
+		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+		-moz-transition:-moz-transform 1.0s ease-in-out;
+		-o-transition:-o-transform 1.0s ease-in-out;
+		-ms-transition:-ms-transform 1.0s ease-in-out;	
+		transition:transform 1.0s ease-in-out;
+	}
+	
+	#mainstagetext {
+		margin-bottom: 8px;
+	}
+	
+	#gallery > div {
+		float: left;
+		width: 48%;
+		height: 135px;
+		margin:1%;
+	}	
+	#gallery > div:last-child{
+		display:block;
+	}
+	.image0{
+		background-image: url('../gallery/thumb0.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image1{
+		background-image: url('../gallery/thumb1.jpg');
+		background-size: auto 100%; 
+	}
+	
+	.image2{
+		background-image: url('../gallery/thumb2.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image3{
+		background-image: url('../gallery/thumb3.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image4{
+		background-image: url('../gallery/thumb4.jpg');
+		background-size: 100%; 
+	}	
+	
+	.image5{
+		background-image: url('../gallery/thumb5.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image6{
+		background-image: url('../gallery/thumb6.jpg');
+		background-size:  100%; 
+	}	
+	
+	.image7{
+		background-image: url('../gallery/thumb7.jpg');
+		background-size: auto 100%; 
+	}	
+	
+	.image8{
+		background-image: url('../gallery/thumb8.jpg');
+		background-size:  100%; 
+	}	
+	
+	.image9{
+		background-image: url('../gallery/thumb9.jpg');
+		background-size:  100%; 
+	}	
+	
+   #meetHenry,#meetNicole,#TheWedding,#AboutUs{
+		border-width: 4px;
+		margin-bottom: 8px;
+		height: 100px;
+   }
+   
+   	#partialOcean,#Oceanview, #swimOut{
+		width: 94%;
+		margin: 3%;
+		margin-bottom: 0%;
+		height: 150px;
+	}
+	
+   #partialOcean > span,#Oceanview > span, #swimOut > span{
+		background-size: auto 100%; 
+		margin-bottom: 0%;
+		height: 21px;
+		text-align: right;
+	}
+   
+   #henrypicture1 {
+		background-image: url('../img/henrypicture1-420h.jpg');
+		height: 250px;
+		width: 100%;
+		background-position: center -35px;
+		float:none;
+	}
+	
+   #nicolepicture1 {
+		background-image: url('../img/nicolepicture1-420h.jpg');
+		height: 250px;
+		width: 100%;
+		background-position: center -35px;
+		float:none;
+	}
+	
+   #mainstage > span {
+   		display:block;
+		width: 100%;
+		position: static;
+		font-size: .8em;
+		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+		padding: 5px;
+		opacity: 1;
+		margin-top:5px;
+	}
+	
+   	#nicolepicture1 > span {
+   		display:block;
+		width: 100%;
+		position: static;
+		font-size: .8em;
+		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+		padding: 5px;
+		opacity: 1;
+		margin-top:5px;
+	}
+	
+	#mainStage{
+		margin-top: 5px;
+	}
+	
+	#imageFramebuttons{
+		right :0px;
+	}
+	
+	#theWeddingstageButtons{
+		width: 270px;
+		margin: auto;
+	}
+	
+	#theWeddingstageButtons > span{
+		width: 90px;
+		font-size: .6em;
+	}	
+	
+}
+
+@media all and (max-width: 600px) and (orientation: landscape)  {
+	#imageframe[data-orientation="landscape"] {
+		background-size: 100% auto;
+		width:100%;
+		height:129%
+	}
+	
+	#imageframe[data-orientation="portrait"] {
+		width:100%;
+		height: 129%;
+		background-size: auto 100%;
+	}
+}
+
+@media all and (max-width: 600px) and (orientation: portrait)  {
+	#imageframe[data-orientation="landscape"] {
+		background-size: 100% auto;
+	}
+	
+	#imageframe[data-orientation="portrait"] {
+		width: 100%;
+		height: 117%;
+		background-size: 100% auto;
+	}

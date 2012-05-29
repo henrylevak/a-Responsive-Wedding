@@ -1,0 +1,296 @@
+<html>
+	<title>Henry & Nicole</title>
+	<head>
+
+		<meta property="og:site_name" content="HenryandNicole.com"/>
+		<meta property="og:title" content="Henry and Nicole's wedding website"/>
+		<meta property="og:url" content="http://www.henryandnicole.com"/>
+		<meta property="og:image" content="http://henryandnicole.com/img/AboutUs.png"/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/tablet.css" />
+		<link rel="stylesheet" type="text/css" href="css/phone.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+		
+		<!-- Start of Woopra Code -->
+<!--
+		<script type="text/javascript">
+		function woopraReady(tracker) {
+		    tracker.setDomain('henryandnicole.com');
+		    tracker.setIdleTimeout(300000);
+		    tracker.track();
+		    return false;
+		}
+		(function() {
+		    var wsc = document.createElement('script');
+		    wsc.src = document.location.protocol+'//static.woopra.com/js/woopra.js';
+		    wsc.type = 'text/javascript';
+		    wsc.async = true;
+		    var ssc = document.getElementsByTagName('script')[0];
+		    ssc.parentNode.insertBefore(wsc, ssc);
+		})();
+		</script>
+-->
+		<!-- End of Woopra Code -->
+		
+		<script type="text/javascript">
+			function onload(){
+				if (navigator.appName == 'Microsoft Internet Explorer') {        
+					var r=confirm("You are using Internet Explorer. You should go download Google Chrome. This website will not work until you do.");
+					if (r==true){
+  						window.location = "http://www.google.com/chrome"
+  					}else{
+  						window.location = "http://www.google.com/chrome"
+  					}
+				}
+				window.scrollTo(0, 1);
+				document.getElementById('imageFrame').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
+				document.getElementById('overLay').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
+				document.addEventListener("orientationchange", updateOrientation,false);
+				preloadThumbs()			
+			}
+     	</script>
+	</head>
+	<body onload="onload()">
+		
+		<div id="imageFramebuttons">
+			<span onclick="closeFrame()">CLOSE.</span>
+			<span onclick="previousNext('next')">NEXT.</span>
+			<span onclick="previousNext('previous')">PREVIOUS.</span>
+		</div>
+		<div id="imageFrame" onclick="previousNext('next')">
+		</div>
+		<div id="overLay"></div>
+		
+		<div id="mainimage">
+			<div>Nicole & Henry</div><br>
+			<div>11.29.12</div><br>
+			<div onclick="scrolltoBottom()">(don't forget to comment)</div>
+		</div>
+
+		<div id="allBoxes">
+			<div id="meetHenry" 		onclick="selection.personSelected('henry')"></div>
+			<div id="meetNicole" 	onclick="selection.personSelected('nicole')"></div>
+			<div id="aboutUs" 		onclick="selection.personSelected('us')"></div>
+			<div id="theWedding" 	onclick="selection.personSelected('wedding')"></div>
+			
+			<div id="mainStage"></div>
+<!--
+			<div id="fb-root"></div>
+			<div class="fb-comments" data-href="http://henryandnicole.com" data-num-posts="5" data-width="470"></div>
+			<script>
+				(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=352635971464230";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+			</script>
+-->
+		</div>
+		
+		<div id="hide">
+		
+			<div id="_meetNicole">
+				<div id="nicolepicture1"></div>
+				<span class="nicolepicture1">	
+					<p>I was born and raised in Hawaii by my parents <span class="bold">Kathleen</span> & <span class="bold">Craig</span> along with my sister and brother <span class="bold">Jen</span> & <span class="bold">Rick</span>. Being the youngest and loving attention, I always had a story, song or dance to share.  I graduated from <span class="bold">Aiea</span> High School, then got my bachelor degree in Communication at the <span class="bold">University of Hawaii</span>.  A few years after graduating college, I moved to St Paul, <span class="bold">Minnesota</span> to live with my mom.  I am so glad I did, not only was I lucky enough to find <span class="bold">love</span>, I was able to establish my <span class="bold">career</span>.</p>	
+					<br>
+					<p>Today, I am in Business Banking and have been with <span class="bold">Wells Fargo Bank</span> since 2006. When I am not working, I enjoy baking cookies & cakes for my coworkers and friends.  I also love to take <span class="bold">yoga</span> classes which I’ve been doing for the last 10 years.  I have two gatos, <span class="bold">Oliver</span> & <span class="bold">Bella</span> and a lovebird named<span class="bold"> Taj</span>.</p>			
+				</span>
+			</div>
+			
+			<div id="_meetHenry">
+				<div id="henrypicture1"></div>
+				<span class="henrypicture1">
+					<p>I was raised in Minnesota by my parents <span class="bold">Galina & Peter</span> along with my one younger sister <span class="bold">Elizabeth</span>. I grew up in <span class="bold">St. Paul</span> but graduated from a high school in Apple Valley. I joined the <span class="bold">US Marine Corps</span> in 2001 and served four years which included two tours in Iraq. After being honorably discharged in 2005, I wanted to continue my education and focus on starting my career.</p><br> 
+					<p>I received a <span class="bold">B.S. in Operations Management</span> from Remington College in San Diego and have worked for technology companies such as <span class="bold">THQ</span> and <span class="bold">Microsoft</span>. I am currently a Mobile Product Manager and get to work with some of the latest mobile technologies. According to <span class="bold">Nicole</span>, my geekiness is very attractive to her so I guess I lucked out. You can be a geek and still get a hot chick.<p>
+				</span>
+			</div>
+			
+			<div id="_meetUs">
+				<div id="mainStagetext">
+					<p class="bold">How we met...</p><br> 
+					<p>It all started back in December of 2005 when I walked into the Apple Valley, Minnesota Sprint Store. I had only been in Minnesota for about two months and was about to start training for my new job. Henry was also on a new adventure in civilian life just being honorably discharged from the United States Marine Corps.  Henry was one of my trainers that day and all I can really remember is constantly laughing with him the entire day. </p><br>
+					<p>According to him, he was immediately smitten by me and made it his personal mission to ask me out. He didn’t exactly have the guts to do it, so he convinced his coworkers to invite me to a concert with him and a few others that weekend. We all went to that concert and had an amazing time!  And very soon after it was clear we were no longer just Nicole or just Henry - we became Nicole & Henry, a couple, best buddies, two peas in a pod & now life long partners.</p><br>
+					<p>Big thank you to <a href="http://leilapeterson.com/">Leila Peterson</a> for taking such beautiful pictures.</p>
+					<div id="gallery">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="_theWedding">
+				<div id="theWeddingstageButtons">
+					<span onclick="picked.room(this)">1. Pick a Room</span>
+					<span onclick="picked.dates(this)">2. Choose Dates</span>
+					<span onclick="picked.bookit(this)">3. Book It</span>
+				</div>
+
+				<div id="theWeddingstageContent"></div>
+			</div>
+			
+			<div id="_Room">
+				<div class="bold center h1">Secrets Maroma Beach, Riviera Cancun Playa Del Carmen, Mexico</div>
+				<div class="center padding">(sorry no keiki's this time, adults only resort. need other options? click Book it)</div>
+				<div>Henry and I vacationed at <a href="http://www.secretsresorts.com/maroma/">Secrets Maroma Beach</a> resort this past February (got engaged there too) and we absolutely fell in love with it. We knew that this was the place we were going to get married!!! We are very excited to share this wonderful day & week with our family and most dearest friends! So get ready to lay on a gorgeous beach, absorb the warm, beautiful weather, sip on ice cold delicious cocktails and devour tons of amazing foods and treats. The countdown is on, so grab your passport & bathing suit and we’ll see you there! - N & H </div>
+				<div id="partialOcean" 	onclick="smoothScroll('header','_partialOcean')"><span>Partial Oceanview - $199.73/night</span></div>
+				<div id="Oceanview" 		onclick="smoothScroll('header','_oceanView')">	 <span>Oceanview - $209.82/night</span></div>
+				<div id="swimOut" 		onclick="smoothScroll('header','_swimOut')">	    <span>Swimout - $215.26/night</span></div>
+				
+				<div>Room rates are per person, per night. For example, if you fly in on Monday and leave Saturday that is considered 5 nights. Secrets Maroma is an All-Inclusive Resort which includes all meals and alcholic beverages, 24 hour room service, daily stocked mini bar and many other additional inclusions (see their <a href="http://www.secretsresorts.com/maroma/">website</a> for more details). Taxes are included in the rate, however tips are at your own discretion.  Airfare and transportation to/from airport are not included. These are the lowest priced rooms, additional room types such as the Honeymoon Suite or other upgrades are available, please contact the travel agent for more information.</div>
+				
+				<img id="header" src="img/heading-border.png">
+				<div id="roomInfo"></div>
+			</div>
+			
+			<div id="_partialOcean">
+				<div class="bold h1 paddingtop">Junior Suite, Partial Oceanview</div>
+				<div class=" paddingtop">This is the only room that can accomidate 2 beds.</div>
+				<table>
+					<tr>
+						<td>If only one person books this room</td>
+						<td>$259.64 / per night</td>
+					</tr>
+					<tr>
+						<td>If two people share this room</td>
+						<td>$199.73 / per person / per night</td>
+					</tr>
+					<tr>
+						<td>If three people share this room</td>
+						<td>First two people pay $199.73, third person pays $179.75</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="_oceanView">
+				<div class="bold h1 paddingtop">Junior Suite, Oceanview</div>
+				<div class=" paddingtop">This room can only accomidate 1 bed.</div>
+				<table>
+					<tr>
+						<td>If only one person books this room</td>
+						<td>$272.77 / per night</td>
+					</tr>
+					<tr>
+						<td>If two people share this room</td>
+						<td>$209.82 / per person / per night</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="_swimOut">
+				<div class="bold h1 paddingtop">Junior Suite, Swim Out</div>
+				<div class=" paddingtop">This room can only accomidate 1 bed.</div>
+				<table>
+					<tr>
+						<td>If only one person books this room</td>
+						<td>$279.64 / per night</td>
+					</tr>
+					<tr>
+						<td>If two people share this room</td>
+						<td>$215.26 / per person / per night</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="_Dates">
+				<div>Henry and I will be in Mexico from Wednesday, November 21st through Saturday, December 1st. Please feel free to join us at anytime. Please keep in mind the wedding ceremony is Thursday, November 29th.  We are hosting a rehearsal dinner the night before the ceremony, Wednesday, November 28th.</div>
+				
+				<table>
+					<tr>
+						<td>Wed 11/21</td>
+						<td>Henry & Nicole arrive</td>
+				 	</tr> 
+				 	<tr>
+						<td>Thu 11/22</td>
+						<td>Thanksgiving Day</td>
+				 	</tr>
+				 	<tr>
+						<td>Fri 11/23</td>
+						<td></td>
+				 	</tr>
+				 	<tr>
+						<td>Sat 11/24</td>
+						<td></td>
+				 	</tr>
+				 	<tr>
+						<td>Sun 11/25</td>
+						<td></td>
+				 	</tr>
+				 	<tr>
+						<td>Mon 11/26</td>
+						<td>Most guests will arrive <span class="bold">(recommended arrival date)</span></td>
+				 	</tr>
+				 	<tr>
+						<td>Tue 11/27</td>
+						<td></td>
+				 	</tr>
+				 	<tr>
+						<td>Wed 11/28</td>
+						<td>Rehearsal Dinner (everyone is invited)</td>
+				 	</tr>
+				 	<tr>
+						<td>Thu 11/29</td>
+						<td>Wedding Day</td>
+				 	</tr>
+				 	<tr>
+						<td>Fri 11/30</td>
+						<td>Activity Day (everyone is invited)</td>
+				 	</tr>
+				 	<tr>
+						<td>Sat 12/01</td>
+						<td>Henry, Nicole and most guests depart <span class="bold">(recommended departure date)</span></td>
+				 	</tr>
+				</table>
+				
+			</div>
+			
+			<div id="_Bookit">
+				<div class="bold h2">Before you call...</div>
+				<ul>
+				  <li>Please plan to book by 8/15.</li>
+				  <li>Review the rooms and rates. If you have any questions, the travel agent will be able to answer them for you.</li>
+				  <li>Figure out which dates you want to book. Most guests will be arriving on 11/26 and departing on 12/01.</li>
+				  <li><span class="bold">Transportation</span> is also not included in any of the rates. When booking, we recommend you purchase transportation to and from the airport.</li>
+				  <li><span class="bold">Airfare</span> is not included in any of the prices. You can book your airfare ticket through the travel agent or use any other website to get the best rate. We recommend you shop around and the tickets where ever you get the best deal. Just make sure to fly into Cancun International Airport.</li>
+				</ul>
+				<div class="bold h2 paddingtop">To book...</div>
+				<ul>
+					<li>
+						<span class="bold">Brent Kotake</span> - Travel Consultant (just let him know its for the Levak/Perry wedding - he’s expecting your call)<br>
+						Office: 408.794.3202 | Fax: 1.800.331.3949<br>
+						Reservations: 1.800.221.3949<br>
+						bkotake@classicvacations.com <br>
+					</li>
+				</ul>
+				<div class="bold h2 paddingtop">After you book...</div>
+				<ul>
+				  <li>Please let Henry or Nicole know once you book your trip so we can keep track of the guestlist</li>
+				  <li><span class="bold">Important </span>- Make sure your passport is current so you don't get stranded in Mexico</li>
+				  <li>Try to not get too excited, we still have a few more months to go :)</li>
+				</ul>
+				
+				<div class="bold h2 paddingtop">Keiki Friendly Resorts...</div>
+				<ul>
+				  <li><a href="http://www.nowresorts.com/sapphire/">Now Sapphire</a></li>
+				  <li><a href="http://www.dreamsresorts.com/drepa/">Dreams Puerto Aventuras</a></li>
+				  <li><a href="http://www.playacarpalace.com/">Playacar Palace</a></li>
+				</ul>
+			</div>
+
+			
+		</div>
+	</body>
+</html>
