@@ -29,6 +29,7 @@
 	}
 	
 	* {
+/* 	-webkit-backface-visibility: hidden; */
 		-webkit-tap-highlight-color:rgba(0,0,0,0);
 		color:#4A4743;
 	   -moz-box-sizing:    border-box;
@@ -36,7 +37,7 @@
 	    box-sizing:        border-box;
 		line-height: 1;
 	}
-
+/*
 	.fb-comments span:first-child{
 		width: 100% !important;
 		padding-top:30px;
@@ -45,6 +46,7 @@
 	#fb-root{
 		display:none !important;
 	}
+*/
 	
 	ol, ul {
 		list-style: none;
@@ -56,44 +58,54 @@
 		content: '';
 		content: none;
 	}
-	
+	@font-face {
+		font-family: "specialFont";
+		src: url("font.woff");
+	}
 	body{
 		background-color: #FCFCFC;
-		font-family: 'Lato', sans-serif;
+		font-family: 'specialFont';
 	}
 
-/*PC*/
+	/*PC*/
 	#mainimage {
+		margin-right: auto;
+		margin-left: auto;
+		visibility: hidden;
+		background-image: url('../img/HenryNicole925.jpg'); 
+		opacity: 0;
+		-webkit-backface-visibility: hidden;
 		background-size: auto 122%;
-		background-image: url('../img/HenryNicole925.png');
 		background-position: 75% 0%;
 		height: 407px;
 		width:960px;
-		margin-right: auto;
-		margin-left: auto;
 		background-color: #f9f9f9;
 		
 		box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 		-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
 		-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
-		
-		border: 10px solid white;
-		margin-bottom: 20px;
 		margin-top: 10px;
+		border: 10px solid white;
+   }
+   
+   #mainimage .transition{
+		transition: opacity 700ms linear;
+		-webkit-transition: opacity 700ms linear;
+		-moz-transition: opacity 700ms linear;
+		-o-transition: opacity 700ms linear;
+		
+		transition-delay: 100ms;
+		-moz-transition-delay: 100ms; /* Firefox 4 */
+		-webkit-transition-delay: 100ms; /* Safari and Chrome */
+		-o-transition-delay: 100ms; /* Opera */   
    }
    
 	#allBoxes.moveaway,#mainimage.moveaway{
-		transform: translate(0px,-425px);
-		-ms-transform: translate(0px,-425px); 
-		-webkit-transform: translate(0px,-425px); 
-		-o-transform: translate(0px,-425px); 
-		-moz-transform: translate(0px,-425px); 
-		
-		-webkit-transition:-webkit-transform 1.0s ease-in-out;
-		-moz-transition:-moz-transform 1.0s ease-in-out;
-		-o-transition:-o-transform 1.0s ease-in-out;
-		-ms-transition:-ms-transform 1.0s ease-in-out;	
-		transition:transform 1.0s ease-in-out;
+		transform: translate(0px,-420px);
+		-ms-transform: translate(0px,-420px); 
+		-webkit-transform: translate(0px,-420px); 
+		-o-transform: translate(0px,-420px); 
+		-moz-transform: translate(0px,-420px); 	
 	}
 	
 	#allBoxes.bringback,#mainimage.bringback{
@@ -113,12 +125,14 @@
    .fb-comments, .fb-comments iframe[style] {width: 100% !important;}
    
    #allBoxes, #fbcomments{
-		width:938px;
+		width:960px;
 		margin-right: auto;
 		margin-left: auto;
 		height: 183px;
-		
-		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+   }
+   
+   .transition{
+   	-webkit-transition:-webkit-transform 1.0s ease-in-out;
 		-moz-transition:-moz-transform 1.0s ease-in-out;
 		-o-transition:-o-transform 1.0s ease-in-out;
 		-ms-transition:-ms-transform 1.0s ease-in-out;	
@@ -126,24 +140,31 @@
    }
    
    #allBoxes{
-		padding-bottom: 40px;
+   	padding-top: 20px;
    }
    
-   #meetHenry,#meetNicole,#theWeddingParty,#TheWedding,#AboutUs,#partialOcean,#Oceanview,#swimOut{
-		margin-bottom: 40px;
+   #meetHenry,#meetNicole,#TheWedding,#AboutUs,#partialOcean,#Oceanview,#swimOut{
 		border-style: solid;
 		border-width: 7px;
 		overflow: hidden;
 		border-color: #f9f9f9;
 		height: 100%;
 		width:20.5%;
-		margin-left: auto;
 		box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 		-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
 		-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 		cursor: pointer;
    }
+   #AboutUs,#meetHenry,#meetNicole{
+   	margin-right: 6%;
+		float: left;
+		height: 145px;
+   }
    
+   #TheWedding{
+		float: right;
+		height: 145px;
+	}
    #header{
    	width:100%;
    }
@@ -152,48 +173,108 @@
    	width: 943px !important;
    }
    
-   #AboutUs,#meetHenry,#meetNicole,#theWeddingParty{
-   	margin-right: 6%;
-		float:left;
-		height: 145px;
+   #meetHenry{
+   	visibility: hidden;
+   	background-image: url('../img/HenryFace.png');
+		background-position: center center;
+		background-size: auto 102%;
+		opacity: 0;
+		transition: opacity 200ms linear;
+		-webkit-transition: opacity 200ms linear;
+		-moz-transition: opacity 200ms linear;
+		-o-transition: opacity 200ms linear;
+		
+		transition-delay: 150ms;
+		-moz-transition-delay: 150ms;
+		-webkit-transition-delay: 150ms;
+		-o-transition-delay: 150ms;
+   }
+
+   #meetHenry > span,#meetNicole > span,#aboutUs > span,#theWedding > span{
+		text-align: right;
+		padding-right: 5px;
+		padding-left: 5px;
+		height:20px;
+		color:black;
+		margin-top: 7px;
+		float: right;
+		background-color: white;
+		color:black;
+		font-size: 1em;
+		opacity: .75;
    }
    
-   #TheWedding{
-		float:left;
-		height: 145px;
-	}
-   	
-	#allBoxes > div:nth-child(-n+3) > div{
-  	 	background-color: white;
-		width: 100%;
-		height: 90%;
-		margin:auto;
-		
-		transition-property: background-position 225ms ease-out;
-		-moz-transition-property: background-position 225ms ease-out;
-		-webkit-transition-property: background-position 225ms ease-out;
-		-o-transition-property: background-position 225ms ease-out;
-		background-size: cover;
-   }
    #meetNicole{
-		background-image: url('../img/NicoleFace.png');
-   }
-   #meetHenry{
-		background-image: url('../img/HenryFace.png');
-		background-position: center center;
+   	visibility: hidden;
+   	background-image: url('../img/NicoleFace.png');
+   	background-position: center center;
+   	background-size: auto 131%;
+		opacity: 0;
+		transition: opacity 200ms linear;
+		-webkit-transition: opacity 200ms linear;
+		-moz-transition: opacity 200ms linear;
+		-o-transition: opacity 200ms linear;
+		
+		transition-delay: 300ms;
+		-moz-transition-delay: 300ms;
+		-webkit-transition-delay: 300ms;
+		-o-transition-delay: 300ms;
    }
    #aboutUs{
-		background-image: url('../img/AboutUs.png');
-		background-position: center center;
+   	visibility: hidden;
+   	background-image: url('../img/AboutUs.png');
+   	background-position: 55% center;
+   	background-size: auto 104%;
+		opacity: 0;
+		transition: opacity 200ms linear;
+		-webkit-transition: opacity 200ms linear;
+		-moz-transition: opacity 200ms linear;
+		-o-transition: opacity 200ms linear;
+		
+		transition-delay: 450ms;
+		-moz-transition-delay: 450ms;
+		-webkit-transition-delay: 450ms;
+		-o-transition-delay: 450ms;
    }
-   #theWeddingParty{
-		background-image: url('../img/TheWeddingparty.png');
+  #theWedding{
+  		visibility: hidden;
+  		background-image: url('../img/TheWedding.png');
 		background-position: center center;
-   } #theWedding{
-		background-image: url('../img/TheWedding.png');
-		background-position: center center;
+		background-size: auto 125%;
+		opacity: 0;
+		transition: opacity 200ms linear;
+		-webkit-transition: opacity 200ms linear;
+		-moz-transition: opacity 200ms linear;
+		-o-transition: opacity 200ms linear;
+		
+		transition-delay: 600ms;
+		-moz-transition-delay: 600ms;
+		-webkit-transition-delay: 600ms;
+		-o-transition-delay:600ms;
    }
-  
+   
+   #loadingoverLay{
+   	top: 0px;
+		background-color:white;
+		opacity: .9;
+		width:100%;
+		height:100%;
+		position:absolute;
+		z-index:10;
+		transition: opacity 600ms linear;
+		-webkit-transition: opacity 600ms linear;
+		-moz-transition: opacity 600ms linear;
+		-o-transition: opacity 600ms linear;
+		text-align: center;
+		font-size: 1.5em;
+		display: table;
+	}
+	
+	#loadingoverLay > div{
+		display: table-cell;
+		vertical-align: middle;	
+	}
+   
 	.nameofhonor{
 		font-weight: 900;
 	}
@@ -222,44 +303,6 @@
 		background-image: url('../img/secrets.jpg');
 	}
 	
-	#bestman >.nameofhonor{
-		float:right;
-	}
-	
-	#bestManimage{	
-		width: 155px;
-		height: 155px;
-		float:right;
-		border-style: solid;
-		border-width: 2px;
-		overflow: hidden;
-		border-color: white;
-		margin: 0px 8px 2px 8px;
-		
-		-moz-box-shadow: 0 0 5px 1px #888;
-		-webkit-box-shadow: 0 0 1px 5px #888;
-		box-shadow: 0 0 5px 1px #888;
-		background-image: url('../img/govze.jpg');
-   		background-position: center center;
-	}
-	
-	#maidofHonorimage{	
-		width: 155px;
-		height: 155px;
-		float:left;
-		border-style: solid;
-		border-width: 2px;
-		overflow: hidden;
-		border-color: white;
-		margin: 0px 8px 2px 8px;
-		
-		-moz-box-shadow: 0 0 5px 1px #888;
-		-webkit-box-shadow: 0 0 1px 5px #888;
-		box-shadow: 0 0 5px 1px #888;
-		background-image: url('../img/govze.jpg');
-   		background-position: center center;
-	}
-	
 	#henrypicture1{
 		background-image: url('../img/henrypicture1.jpg');
 		height: 600px;
@@ -273,7 +316,7 @@
 		background-color: white;
 		position: absolute;
 		right: 3%;
-		top: 20px;
+		top: 208px;
 		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 		padding: 10px;
 		opacity: .8;
@@ -285,6 +328,7 @@
 		height: 600px;
 		width:100%;
 		background-position: 0% 0%; 
+		top: 210px;
 	}
 	
 	.nicolepicture1{
@@ -293,14 +337,15 @@
 		background-color: white;
 		position: absolute;
 		left: 2%;
-		top: 100px;
+		top: 300px;
 		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 		padding: 10px;
 		opacity: .8;
 	}
 
 	#mainStage{
-		-webkit-transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
+		padding-bottom: 5px;
 		clear: both;
 		width: 100%;
 		display:none;
@@ -310,10 +355,11 @@
 		-webkit-transition: opacity 300ms linear;
 		-moz-transition: opacity 300ms linear;
 		-o-transition: opacity 300ms linear;
+		padding-top:15px;
 	}
 	
 	#mainimage > div{
-		-webkit-transform:translate3d(0,0,0);
+		-webkit-backface-visibility: hidden;
 		display:inline;
 		background-color:white;
 		opacity:0;
@@ -333,6 +379,7 @@
 		left: 16%;
 		padding: 7px;
 	}
+	
 	#mainimage > div:nth-child(3){
 		top: 15%;
 		left: 16%;
@@ -396,16 +443,16 @@
 	
 	#partialOcean{
 		background-size: 115%;
-		background-image: url('../img/jrpartialocean.png');
+		background-image: url('../img/jrpartialocean300.jpg');
 		background-position:center; 
 	}
 	#Oceanview{
-		background-image: url('../img/jrsuiteocean.png');
+		background-image: url('../img/jrsuiteocean300.jpg');
 		background-position:center; 
 		background-size: 115%;
 	}
 	#swimOut{
-		background-image: url('../img/jrsuiteswimout.png');
+		background-image: url('../img/jrsuiteswimout300.jpg');
 		background-position:center; 
 		background-size: 115%;
 	}
@@ -502,7 +549,7 @@
 	#theWeddingstageButtons{
 		width: 480px;
 		margin: auto;
-		height: 35px
+		height: 27px
 	}
 	
 	#theWeddingstageButtons > span{
@@ -511,7 +558,7 @@
 		text-shadow: 1px 1px 1px white; 
 		text-align: center;
 		width:160px;
-		padding: 6px 12px 6px 10px;
+		padding: 6px;
 		cursor: pointer;
 		border-style: solid;
 		border-width: 1px;
@@ -551,7 +598,7 @@
 		border-radius: 0px 4px 4px 0px;
 	}
 	#theWeddingstageContent{
-		padding-top: 30px;
+		padding-top: 15px;
 	}
 	
 	li{
@@ -612,12 +659,19 @@
 	.paddingtop{
 		padding-top: 20px;
 	}
+	
 	#overLay{
 		background-color:white;
 		opacity:.9;
 		width:100%;
-		height:115%;
+		height:100%;
 		position:absolute;
-		display:none;
+		display:none; 
 		z-index:10;
+		transition: opacity 600ms linear;
+		-webkit-transition: opacity 600ms linear;
+		-moz-transition: opacity 600ms linear;
+		-o-transition: opacity 600ms linear;
+		text-align: center;
+		font-size: 1.5em;
 	}

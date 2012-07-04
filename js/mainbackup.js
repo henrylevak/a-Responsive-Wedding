@@ -7,13 +7,11 @@ function onload(){
 			window.location = "http://www.google.com/chrome"
 		}
 	}
-
 	document.getElementById('imageFrame').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
 	document.getElementById('overLay').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
 	document.getElementById('loadingoverLay').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
-
 	document.addEventListener("orientationchange", updateOrientation,false);
-	preloadThumbs();			
+	//preloadThumbs();			
 }
 
 
@@ -22,7 +20,14 @@ function preloadThumbs() {
 	var loaded = 0;
 	var imageObj = new Array();
 	var images = new Array();
-
+	
+/*
+	images[0]	=	"img/HenryFace.png"
+	images[1]	=	"img/NicoleFace.png"
+	images[2]	=	"img/AboutUs.png"
+	images[3]	=	"img/TheWedding.png"
+*/
+	
 	images[0]	=	"gallery/thumb0.jpg"
 	images[1]	=	"img/jrpartialocean300.jpg"
 	images[2]	=	"img/jrsuiteswimout300.jpg"
@@ -53,6 +58,13 @@ function preloadThumbs() {
 	images[13]	=	"gallery/thumb9.jpg"
 	images[15]	=	"img/nicolepicture1.jpg"
 	
+/*
+	images[16]	=	"gallery/thumb0.jpg"
+	images[17]	=	"img/jrpartialocean300.jpg"
+	images[18]	=	"img/jrsuiteswimout300.jpg"
+	images[19]	=	"img/jrsuiteocean300.jpg";
+*/
+    
 	while(i<=images.length-1){
 		imageObj[i] 	= new Image(); 
 		imageObj[i].src	=images[i]
@@ -72,8 +84,16 @@ function sayit(i){
 }
 
 function loadMainimages(){
+alert('load')
 	setTimeout('loadingoverLay.hide();animate.meetHenry(); animate.mainImage(); animate.meetNicole(); animate.aboutUs(); animate.theWedding(); showText("show");', 500)
 	setTimeout('window.scrollTo(0, 1)', 1000)
+	//document.getElementById('mainimage').style.backgroundImage	= "url('../img/HenryNicole925.png')";
+/*
+	document.getElementById('meetHenry').style.backgroundImage	= "url('../img/HenryFace.png')";
+	document.getElementById('meetNicole').style.backgroundImage	= "url('../img/NicoleFace.png')";
+	document.getElementById('aboutUs').style.backgroundImage	= "url('../img/AboutUs.png')";
+	document.getElementById('theWedding').style.backgroundImage	= "url('../img/TheWedding.png')";
+*/
 }
 
 var selection = {
@@ -86,12 +106,8 @@ var selection = {
 	},
 	selectPerson: function(person){
 		showText('hide');
-		document.getElementById("mainimage").className 		= "moveaway transition";
-		setTimeout( "document.getElementById('mainimage').className = 'moveaway'", 1100)
-		
-		document.getElementById("allBoxes").className  		= "moveaway transition";
-		setTimeout( "document.getElementById('allBoxes').className = 'moveaway'", 1100)
-		
+		document.getElementById("mainimage").className 		= "moveaway";
+		document.getElementById("allBoxes").className  		= "moveaway";
 		document.getElementById('mainStage').style.display 	= "block";
 		setTimeout( "document.getElementById('mainStage').style.opacity = '1'", 400)
 		this.loadupmainStage(person)
@@ -140,19 +156,20 @@ function imageSelect(i,number){
 		var imageNumber 	= i.getAttribute('data-number')
 	}
 	var imageHeight, imageWidth;
-	var imageFrame 			= document.getElementById('imageFrame');
+	var imageFrame 		= document.getElementById('imageFrame');
 	var newImg 				= new Image();
 		 newImg.src 		= "../gallery/"+ imageNumber +".jpg";
-	var scrollDistance 		= window.pageYOffset;
+	var scrollDistance 	= window.pageYOffset;
 	var windowWidth 		= window.innerWidth;
 	var windowHeight 		= window.innerHeight;
 	var getoverLay			= document.getElementById('overLay');
-	var getloadingoverLay 	= document.getElementById('loadingoverLay');
-	getloadingoverLay.style.top  = scrollDistance;
+	var getloadingoverLay = document.getElementById('loadingoverLay');
+	getloadingoverLay.style.top = scrollDistance;
 	getoverLay.style.height 	 = "130%";
 	loadingoverLay.show()
 	
  	 newImg.onload = function(){
+ 	 alert('hide 1')
  	 	 loadingoverLay.hide()
  	 	 
 		 document.getElementById('imageFrame').style.display 			= "inline";

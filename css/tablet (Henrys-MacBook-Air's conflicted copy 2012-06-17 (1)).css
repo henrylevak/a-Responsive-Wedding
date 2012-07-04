@@ -6,13 +6,10 @@
 	
 	#mainimage {
 		max-width: 960px;
+/* 		background-image: url('../img/HenryNicole925.png'); */
 		background-position: 75% 0%;
 		height: 407px;
-		width: 95%;
-		left: 2.5%;
-		margin-top: 10px;
-		position:absolute;
-
+		width: 94%;
 	}
   
 	#mainimage > div:nth-child(3){
@@ -27,27 +24,32 @@
 	}
 	
 	#allBoxes.moveaway, #mainimage.moveaway{
-		transform: translate(0px,-430px);
-		-ms-transform: translate(0px,-430px); /* IE 9 */
-		-webkit-transform: translate(0px,-430px); /* Safari and Chrome */
-		-o-transform: translate(0px,-430px); /* Opera */
-		-moz-transform: translate(0px,-430px); /* Firefox */
+		transform: translate(0px,-425px);
+		-ms-transform: translate(0px,-425px); /* IE 9 */
+		-webkit-transform: translate(0px,-425px); /* Safari and Chrome */
+		-o-transform: translate(0px,-425px); /* Opera */
+		-moz-transform: translate(0px,-425px); /* Firefox */
+		
+		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+		-moz-transition:-moz-transform 1.0s ease-in-out;
+		-o-transition:-o-transform 1.0s ease-in-out;
+		-ms-transition:-ms-transform 1.0s ease-in-out;	
+		transition:transform 1.0s ease-in-out;
 	}
-
+	
 	#mainimage > div{
 		position:relative;
 	}
-
-	#allBoxes, #fbcomments{
-		max-width: 960px;
-		width:95%;
-		height: 183px;
-		top: 415px;
-		position: absolute;
-		left: 2.5%;
-   }
    
-   #allBoxes.transition, #fbcomments.transition{
+	#allBoxes{
+	   	padding-bottom: 40px;
+	}
+   
+	#allBoxes, #fbcomments{
+	   	max-width: 960px;
+		width:94%;
+		height: 183px;
+		
 		-webkit-transition: -webkit-transform 1.0s ease-in-out;
 		-moz-transition: -moz-transform 1.0s ease-in-out;
 		-o-transition: -o-transform 1.0s ease-in-out;
@@ -58,12 +60,58 @@
 	#fbcomments{
 		float:left;
 	}
-
+   
+   #meetHenry,#meetNicole,#TheWedding,#AboutUs{
+/*  margin-bottom: 20px; */
+   	border-style: solid;
+	border-width: 7px;
+	overflow: hidden;
+	border-color: #f9f9f9;
+	height: 145px;
+	width:20.5%;
+	box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+	-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+	-webkit-box-shadow: 0 1px 3px rgba(34,25,25,0.4);
+   }
+   
    iframe{
 	   width: 943px !important;
    }
    
+	#aboutUs,#meetHenry,#meetNicole{
+		margin-right: 6%;
+		float:left;
+	}
+   	
+/* #allBoxes > div:nth-child(-n+3) > div{
+  	 	background-color: white;
+		width: 100%;
+		height:100%;
+		margin:auto;
+		transition-property:  background-position 225ms ease-out;
+		-moz-transition-property: background-position 225ms ease-out;
+		-webkit-transition-property: background-position 225ms ease-out;
+		-o-transition-property: background-position 225ms ease-out;
+		background-size: 100% 100%;
+   }
+*/
+   #meetNicole{
+   	background-image: url('../img/NicoleFace.png');
+   	background-position: center center;
+   	background-size: auto 131%;
+   }
+   #meetHenry{
+   	background-image: url('../img/HenryFace.png');
+   	background-position: center center;
+   	background-size: auto 100%;
+   }
+   #aboutUs{
+   	background-image: url('../img/AboutUs.png');
+   	background-position: 55% center;
+   	background-size: auto 104%;
+   }
    #theWedding{
+   	background-image: url('../img/TheWedding.png');
    	background-position: center center;
    }
 	.slowTransition{
@@ -102,15 +150,14 @@
 		background-position: 0%; 
 	}
 	.nicolepicture1{
-		top: 190px;
-		width: 35%;
+		top: 10px;
+		width: 48%;
 		font-size: .9em;
 	}
-	
 	.henrypicture1{
-		width: 30%;
+		width: 38%;
 		right: 3%;
-		top: 195px;
+		top: 20px;
 		font-size: .85em;
 		max-height: 400px;
 	}
@@ -118,11 +165,17 @@
 	#mainStage{
 		margin-left:0px;
 	}
+	#imageFrame[data-orientation="landscape"]{
+		background-size: 100% auto;
+	}
+
+#imageFrame[data-orientation="portrait"]{
+	}
 }
 
 @media all and (max-width: 1275px) {
 	#henrypicture1{
-		background-position: 68% 61%;
+		background-position: 100%; 
 	}
 	#nicolepicture1{
 		background-position: 8%; 
@@ -180,12 +233,15 @@
 		background-size:  100%; 
 	}	
 	
+	#henrypicture1{
+		background-position: 73%; 
+	}
+	
 	.henrypicture1{
-		background-size: 50% 50%;
 		font-size: .75em;
-		width: 38%;
+		width: 45%;
 		right: 1%;
-		top: 205px;
+		top: 20px;
 	}
 	#gallery > div {
 		float: left;
@@ -207,30 +263,24 @@
 	.nicolepicture1{
 		font-size:.8em;
 	}
-	#partialOcean, #Oceanview, #swimOut{
-		background-size: auto; 
-	}
-	
 }
 
 @media all and (max-width: 678px) {
 	#mainimage{
 		height: 300px;
 		background-image: url('../img/HenryNicole700.png');
+	/* 	border: 10px solid blue; */
 		background-position: 28% 0%;
 		background-size: auto 100%;
 	}
 	
-	#allBoxes, #fbcomments{
-		top: 300px;
-   }
-	
 	#allBoxes.moveaway,#mainimage.moveaway{
-		transform: translate(0px,-315px);
-		-ms-transform: translate(0px,-315px); 
-		-webkit-transform: translate(0px,-315px); 
-		-o-transform: translate(0px,-315px); 
-		-moz-transform: translate(0px,-315px); 
+		transform: translate(0px,-320px);
+		-ms-transform: translate(0px,-320px); 
+		-webkit-transform: translate(0px,-320px); 
+		-o-transform: translate(0px,-320px); 
+		-moz-transform: translate(0px,-320px); 
+
 	}
 
 	#meethenry, #meetnicole, #thewedding, #aboutus{
@@ -267,9 +317,11 @@
    }
 }
 
-@media all and (max-width: 556px) {
-	.nicolepicture1{
-		font-size: .75em;
-		width: 46%;
+/*
+@media all and (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+	#picture1.henry{
+		background-image: url('../img/henrypicture1-420h@2x.png');
+		background-size: 633px 420px; 
 	}
 }
+*/

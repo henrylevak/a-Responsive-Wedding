@@ -8,14 +8,13 @@
 		margin-bottom: 20px !important;
 	}
 	#mainImage{
-		position: absolute;
 		height: 165px;
 		margin-bottom: 15px;
+		margin-top: 10px;
 		border-width: 7px;
 		background-size: auto 114%;
 		background-position: 18% 48%;
 		width: 95%;
-		left: 2.5%;
 		background-image: url('../img/HenryNicole380.png'); 	
 	}
 	#mainimage > div:first-child{
@@ -36,6 +35,7 @@
 		left: 11%;
 		font-size: 0.7em;
 	}
+	
 	#aboutUs{
 		clear: both;
 	}
@@ -55,10 +55,7 @@
 	}
 	
 	#allBoxes{
-		height: 251px;
-		position: absolute;
-		top: 165px;
-		left:2.5%;
+		height: 120px;
 	}
 	
 	#allBoxes.moveaway, #mainimage.moveaway{
@@ -67,6 +64,12 @@
 		-webkit-transform: translate(0px,-183px); /* Safari and Chrome */
 		-o-transform: translate(0px,-183px); /* Opera */
 		-moz-transform: translate(0px,-183px); /* Firefox */
+		
+		-webkit-transition:-webkit-transform 1.0s ease-in-out;
+		-moz-transition:-moz-transform 1.0s ease-in-out;
+		-o-transition:-o-transform 1.0s ease-in-out;
+		-ms-transition:-ms-transform 1.0s ease-in-out;	
+		transition:transform 1.0s ease-in-out;
 	}
 	
 	#mainstagetext {
@@ -75,13 +78,10 @@
 	
 	#gallery > div {
 		float: left;
-		width: 49%;
+		width: 48%;
 		height: 135px;
-		margin: 1% 0% 1% 0px;
+		margin:1%;
 	}	
-	#gallery > div:nth-child(odd){
-		margin-right:1%;
-	}
 	
 	#gallery > div:last-child{
 		display:block;
@@ -139,8 +139,8 @@
 	
    #meetHenry,#meetNicole,#TheWedding,#AboutUs{
 		border-width: 5px;
-		margin-bottom: 10px;
-		height: 105px;
+		margin-bottom: 13px;
+		height: 100px;
    }
    
    #partialOcean,#Oceanview, #swimOut{
@@ -148,7 +148,6 @@
 		margin: 3%;
 		margin-bottom: 0%;
 		height: 150px;
-		background-size: 100% auto; 
 	}
 	
 	#swimOut{
@@ -164,16 +163,14 @@
    
    #henrypicture1 {
 		background-image: url('../img/henrypicture1-300h.jpg');
-		background-size: 100% auto;
 		height: 250px;
 		width: 100%;
+		background-size: 100% auto;
 		float:none;
-		background-position: 160% 21%;
 	}
 	
    #nicolepicture1 {
 		background-image: url('../img/nicolepicture1-300h.jpg');
-		background-size: 100% auto;
 		height: 250px;
 		width: 100%;
 		background-position: center -35px;
@@ -203,9 +200,9 @@
 	}
 	
 	#mainStage{
-		width: 100%;
-		position: absolute;
-		top: 251px;
+		margin-top: 5px;
+		width: 94%;
+		margin-left: 3%;
 	}
 	
 	#imageFramebuttons{
@@ -240,6 +237,10 @@
 		width:100%;
 		height: 129%;
 		background-size: auto 100%;
+	}
+	#aboutUs{
+		background-position: 48% center;
+		background-size: auto 120%;
 	}
 }
 
