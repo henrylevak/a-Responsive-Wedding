@@ -86,6 +86,7 @@ var selection = {
 	},
 	selectPerson: function(person){
 		showText('hide');
+		
 		document.getElementById("mainimage").className 		= "moveaway transition";
 		setTimeout( "document.getElementById('mainimage').className = 'moveaway'", 1100)
 		
