@@ -6,7 +6,7 @@ function onload(){
 		}else{
 			window.location = "http://www.google.com/chrome"
 		}
-	}
+	};
 
 	document.getElementById('imageFrame').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
 	document.getElementById('overLay').addEventListener('touchmove', function(e){ e.preventDefault(); }); 
@@ -15,7 +15,6 @@ function onload(){
 	document.addEventListener("orientationchange", updateOrientation,false);
 	preloadThumbs();			
 }
-
 
 function preloadThumbs() {
 	var i = 0;

@@ -18,6 +18,42 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
+	
+	.bold{
+		font-weight:900;
+	}
+	.center{
+		text-align:center;
+	}
+	.h1{
+		font-size: 1.5em;
+	}
+	.h2{
+		font-size: 1.2em;
+	}
+	.padding{
+		padding-bottom: 20px;
+	}
+	.paddingtop{
+		padding-top: 20px;
+	}
+	
+	#overLay{
+		background-color:white;
+		opacity:.9;
+		width:100%;
+		height:100%;
+		position:absolute;
+		display:none; 
+		z-index:10;
+		transition: opacity 600ms linear;
+		-webkit-transition: opacity 600ms linear;
+		-moz-transition: opacity 600ms linear;
+		-o-transition: opacity 600ms linear;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
 	/* HTML5 display-role reset for older browsers */
 	article, aside, details, figcaption, figure, 
 	footer, header, hgroup, menu, nav, section {
@@ -28,16 +64,16 @@
 		display:none;
 	}
 	
-	* {
-/* 	-webkit-backface-visibility: hidden; */
+	*{
+		/* 	-webkit-backface-visibility: hidden; */
 		-webkit-tap-highlight-color:rgba(0,0,0,0);
 		color:#4A4743;
 	   -moz-box-sizing:    border-box;
 	   -webkit-box-sizing: border-box;
-	    box-sizing:        border-box;
+	   box-sizing:        border-box;
 		line-height: 1;
 	}
-/*
+	/*
 	.fb-comments span:first-child{
 		width: 100% !important;
 		padding-top:30px;
@@ -46,7 +82,7 @@
 	#fb-root{
 		display:none !important;
 	}
-*/
+	*/
 	
 	ol, ul {
 		list-style: none;
@@ -128,7 +164,7 @@
 		transition:transform 1.0s ease-in-out;
 	}
 
-/*    .fb-comments, .fb-comments iframe[style] {width: 100% !important;} */
+	/*    .fb-comments, .fb-comments iframe[style] {width: 100% !important;} */
    
    #allBoxes, #fbcomments{
 		width:960px;
@@ -142,11 +178,12 @@
    }
    
    #meetHenry,#meetNicole,#TheWedding,#AboutUs,#partialOcean,#Oceanview,#swimOut{
+   
 		border-style: solid;
 		border-width: 7px;
 		overflow: hidden;
 		border-color: #f9f9f9;
-		height: 100%;
+		height: 175px;
 		width:20.5%;
 		box-shadow: 0 1px 3px rgba(34,25,25,0.4);
 		-moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
@@ -342,18 +379,18 @@
 	}
 
 	#mainStage{
-		-webkit-backface-visibility: hidden;
+		/* 		-webkit-backface-visibility: hidden; */
 		padding-bottom: 5px;
 		clear: both;
 		width: 100%;
-		display:none;
+		display: none;
 		text-align: justify;
 		opacity: 0;
 		transition: opacity 300ms linear;
 		-webkit-transition: opacity 300ms linear;
 		-moz-transition: opacity 300ms linear;
 		-o-transition: opacity 300ms linear;
-		padding-top:15px;
+		padding-top: 15px;
 	}
 	
 	#mainimage > div{
@@ -545,7 +582,8 @@
 	}
 	
 	#theWeddingstageButtons{
-		width: 480px;
+		max-width: 480px;
+		width:100%;
 		margin: auto;
 		height: 27px
 	}
@@ -555,8 +593,8 @@
 		color:#4A4743;
 		text-shadow: 1px 1px 1px white; 
 		text-align: center;
-		width:160px;
-		padding: 6px;
+		width:33.33333333333333333%;
+		padding: 5px;
 		cursor: pointer;
 		border-style: solid;
 		border-width: 1px;
@@ -639,40 +677,6 @@
 		height: 0px;
 	}
 }
-	.bold{
-		font-weight:900;
-	}
-	.center{
-		text-align:center;
-	}
-	.h1{
-		font-size: 1.5em;
-	}
-	.h2{
-		font-size: 1.2em;
-	}
-	.padding{
-		padding-bottom: 20px;
-	}
-	.paddingtop{
-		padding-top: 20px;
-	}
-	
-	#overLay{
-		background-color:white;
-		opacity:.9;
-		width:100%;
-		height:100%;
-		position:absolute;
-		display:none; 
-		z-index:10;
-		transition: opacity 600ms linear;
-		-webkit-transition: opacity 600ms linear;
-		-moz-transition: opacity 600ms linear;
-		-o-transition: opacity 600ms linear;
-		text-align: center;
-		font-size: 1.5em;
-	}
 	
 @media all and (max-width: 1002px) {
 	
@@ -765,7 +769,7 @@
 		background-image: url('../img/henrypicture1-420h.jpg');
 		height: 420px;
 		width:100%;
-		background-position: 100%; 
+		background-position: 80%; 
 	}
 	#nicolepicture1{
 		background-image: url('../img/nicolepicture1-420h.jpg');
@@ -786,16 +790,20 @@
 		font-size: .85em;
 		max-height: 400px;
 	}
+/*
 	
 	#mainStage{
 		margin-left:0px;
 	}
+*/
 }
 
 @media all and (max-width: 1275px) {
+/*
 	#henrypicture1{
 		background-position: 68% 61%;
 	}
+*/
 	#nicolepicture1{
 		background-position: 8%; 
 	}
@@ -887,22 +895,43 @@
 
 @media all and (max-width: 678px) {
 	#mainimage{
-		height: 300px;
+		height: 200px;
 		background-image: url('../img/HenryNicole700.png');
 		background-position: 28% 0%;
-		background-size: auto 100%;
+		background-size: auto 107%;
 	}
 	
+	
+	
+	#henrypicture1{
+		background-position: 50%; 
+	}
+	#nicolepicture1{
+		background-position: 0%; 
+	}
+	
+	
 	#allBoxes, #fbcomments{
-		top: 300px;
+		top: 205px;
    }
+   
+   #mainstage > span {
+   	display:block;
+		width: 100%;
+		position: static;
+		font-size: 1em;
+		box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+		padding: 5px;
+		opacity: 1;
+		margin-top:5px;
+	}
 	
 	#allBoxes.moveaway,#mainimage.moveaway{
-		transform: translate(0px,-315px);
-		-ms-transform: translate(0px,-315px); 
-		-webkit-transform: translate(0px,-315px); 
-		-o-transform: translate(0px,-315px); 
-		-moz-transform: translate(0px,-315px); 
+		transform: translate(0px,-217px);
+		-ms-transform: translate(0px,-217px); 
+		-webkit-transform: translate(0px,-217px); 
+		-o-transform: translate(0px,-217px); 
+		-moz-transform: translate(0px,-217px); 
 	}
 
 	#meethenry, #meetnicole, #thewedding, #aboutus{
@@ -1113,21 +1142,22 @@
    #henrypicture1 {
 		background-image: url('../img/henrypicture1-300h.jpg');
 		background-size: 100% auto;
-		height: 250px;
+		height: 219px;
 		width: 100%;
 		float:none;
-		background-position: 160% 21%;
+		background-position: 160% 35%;
 	}
 	
    #nicolepicture1 {
 		background-image: url('../img/nicolepicture1-300h.jpg');
 		background-size: 100% auto;
-		height: 250px;
+		height: 219px;
 		width: 100%;
 		background-position: center -35px;
 		float:none;
 	}
 	
+/*
    #mainstage > span {
    	display:block;
 		width: 100%;
@@ -1138,6 +1168,7 @@
 		opacity: 1;
 		margin-top:5px;
 	}
+*/
 	
    #nicolepicture1 > span {
    	display:block;
@@ -1151,9 +1182,10 @@
 	}
 	
 	#mainStage{
-		width: 100%;
+/* 		width: 100%; */
 		position: absolute;
 		top: 251px;
+		padding-top: 0px;
 	}
 	
 	#imageFramebuttons{
@@ -1161,8 +1193,8 @@
 	}
 	
 	#theWeddingstageButtons{
-		width: 280px;
-		margin: auto;
+		width: 100%;
+/* 		margin: auto; */
 	}
 	
 	#theWeddingstageButtons > span{
